@@ -50,3 +50,10 @@ attach(5)
 //   attach(n)
 // -> n random integer
 // <- random name added
+let randomNumArray = Array.apply(null, {length: 10}).map(
+	Function.call,
+	Math.random
+)
+let randomNumArrayEnteros = randomNumArray.map(x => Math.floor(x * 10 + 1))
+let randomNombresArray = randomNumArrayEnteros.map(x => 'name' + x)
+console.log(randomNombresArray)
